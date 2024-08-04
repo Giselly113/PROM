@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROMOMASTT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>MASTT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         header {
-            background-color: #333;
+            background-color: #1488b6ef;
             color: #fff;
-            padding: 20px;
-            text-align: center;
+            padding: 10px;
+            text-align: left;
             font-weight: 700; /* Fonte em negrito */
         }
         .search-bar {
             margin: 20px auto;
-            text-align: center;
+            text-align: left;
         }
         .search-bar input {
             padding: 10px;
-            width: 80%;
+            width: 100%;
             max-width: 600px;
         }
         .banner {
@@ -40,44 +40,44 @@
         .product-grid {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between; /* Distribui os itens uniformemente */
-            margin: 20px;
+            justify-content: space-between; /* Espaçamento uniforme */
+            margin: 10px;
         }
         .product {
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 10px;
             margin: 10px;
             padding: 10px;
             width: 22%; /* Ajuste para caber 4 produtos por linha */
-            height: 290px; /* Altura fixa */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Alinha o conteúdo verticalmente */
+            box-sizing: border-box;
             text-align: center;
-            box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões */
+            position: relative; /* Necessário para posicionamento absoluto do botão */
         }
         .product img {
             width: 100%;
-            height: 190px; /* Altura fixa para as imagens */
-            object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço */
-            border-radius: 1px; /* Arredonda as bordas das imagens */
-            margin-bottom: 0px; /* Espaço abaixo da imagem */
+            height: 200px; /* Altura fixa para as imagens */
+            object-fit: contain; /* Ajusta a imagem para caber na caixa */
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
         .product h3 {
             font-weight: 700; /* Fonte em negrito */
-            margin: 10px 0; /* Espaço ao redor do título */
-            font-size: 1.1em; /* Ajuste o tamanho do texto conforme necessário */
+            margin: 50px 0;
+            font-size: 1.2em;
         }
         .product .price-button {
             background-color: rgb(161, 11, 11);
             color: #fff;
-            padding: 0px;
+            padding: 10px;
             border: none;
             cursor: pointer;
             text-decoration: none;
-            display: block;
-            text-align: center
-        
+            text-align: center;
+            border-radius: 5px;
+            position: absolute; /* Posiciona o botão de forma absoluta */
+            bottom: 10px; /* Distância do fundo da caixa do produto */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translateX(-50%); /* Ajusta a posição central */
         }
         .product .price-button:hover {
             background-color: darkblue;
@@ -85,7 +85,7 @@
         .footer {
             background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
         }
         .footer a {
@@ -105,8 +105,8 @@
 </div>
 
 <div class="banner">
-    <a href="link-do-banner" target="_blank">
-        <img src="" alt="Banner Promocional">
+    <a href="" target="_blank">
+        <img src="" alt="Banner">
     </a>
 </div>
 
@@ -118,155 +118,171 @@
         <a href="link-de-afiliado1" class="price-button" onclick="showAlert('Produto 1')">R$ 59,00</a>
     </div>
     <div class="product">
-        <img src="https://m.media-amazon.com/images/I/71mBtg8WsvL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Produto 2">
-        <h3>Kit Sabonete em Barra Pom Pom Loção Hidratante com 5 unidades </h3>
-        <a href="https://amzn.to/3LGFq4V" class="price-button" onclick="showAlert('Produto 2')">R$ 12,00</a>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_746842-MLU72339227055_102023-O.webp" alt="Produto 2">
+        <h3>Shampoo Esfoliante Anticaspa 150g</h3>
+        <a href="#" class="price-button" onclick="showAlert('Produto 2')">R$ 71,00</a>
     </div>
     <div class="product">
-        <img src="https://m.media-amazon.com/images/I/61gQETlUa4L.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Produto 3">
-        <h3>Intimus Gel Absorvente Noturno </h3>
-        <a href=" https://amzn.to/3yfw0u6" class="price-button" onclick="showAlert('Produto 3')">R$ 200,00</a>
-    </div>
-    <!-- Adicionando mais 20 produtos -->
-    <div class="product">
-        <img src="https://m.media-amazon.com/images/I/51WD3KUSgyL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Produto 4">
-        <h3>Produto 4</h3>
-        <a href="link-de-afiliado4" class="price-button" onclick="showAlert('Produto 4')">R$ 250,00</a>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_943478-MLU72700628783_112023-O.webp" alt="Produto 3">
+        <h3>Relógio Casio Masculino Digital</h3>
+        <a href="https://mercadolivre.com/sec/2KC49of" class="price-button" onclick="showAlert('Produto 3')">R$ 118,00</a>
     </div>
     <div class="product">
-        <img src="https://down-tx-br.img.susercontent.com/br-11134207-7r98o-ln7bjtxole8303.webp" alt="Produto 5">
-        <h3>Kit 1600 lenço umidecido</h3>
-        <a href="https://s.shopee.com.br/6KkM8qJFuE" class="price-button" onclick="showAlert('Produto 5')">R$ 79,90</a>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_810842-MLU76732995708_062024-O.webp" alt="Produto 4">
+        <h3>Smart TV 32 polegadas HD Roku</h3>
+        <a href="https://mercadolivre.com/sec/1KR8a3X" class="price-button" onclick="showAlert('Produto 4')">R$ 118,00</a>
     </div>
     <div class="product">
-        <img src="produto6.jpg" alt="Produto 6">
-        <h3>Produto 6</h3>
-        <a href="link-de-afiliado6" class="price-button" onclick="showAlert('Produto 6')">R$ 350,00</a>
+        <img src="https://m.media-amazon.com/images/I/61lXcxCQQqL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Produto 5">
+        <h3>Óleo Lola Pinga Cenoura e Oliva 50ml</h3>
+        <a href="https://s.shopee.com.br/6KkM8qJFuE" class="price-button" onclick="showAlert('Produto 5')">R$ 26,90</a>
     </div>
     <div class="product">
-        <img src="produto7.jpg" alt="Produto 7">
-        <h3>Produto 7</h3>
-        <a href="link-de-afiliado7" class="price-button" onclick="showAlert('Produto 7')">R$ 400,00</a>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_603550-MLU77801732376_072024-O.webp" alt="Produto 6">
+        <h3>Guarda-Roupa Solteiro com Espelho 4 Portas 3 Gavetas</h3>
+        <a href="https://mercadolivre.com/sec/2akHSrw" class="price-button" onclick="showAlert('Produto 6')">R$ 621,50</a>
     </div>
     <div class="product">
-        <img src="produto8.jpg" alt="Produto 8">
-        <h3>Produto 8</h3>
-        <a href="link-de-afiliado8" class="price-button" onclick="showAlert('Produto 8')">R$ 450,00</a>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_814802-MLU75980919841_042024-O.webp" alt="Produto 7">
+        <h3>Jogo de Panelas Solar em Aço Inox 5 Peças Tramontina</h3>
+        <a href="https://mercadolivre.com/sec/1eABFuv" class="price-button" onclick="showAlert('Produto 7')">R$ 512,00</a>
     </div>
     <div class="product">
-        <img src="produto9.jpg" alt="Produto 9">
-        <h3>Produto 9</h3>
-        <a href="link-de-afiliado9" class="price-button" onclick="showAlert('Produto 9')">R$ 500,00</a>
+        <img src="https://m.media-amazon.com/images/I/71cIquotuZL._AC_SX679_.jpg" alt="Produto 8">
+        <h3>Heinz Ketchup Tradicional, 1,033KG</h3>
+        <a href="link-de-afiliado8" class="price-button" onclick="showAlert('Produto 8')">R$ 16,00</a>
     </div>
     <div class="product">
-        <img src="produto10.jpg" alt="Produto 10">
-        <h3>Produto 10</h3>
-        <a href="link-de-afiliado10" class="price-button" onclick="showAlert('Produto 10')">R$ 550,00</a>
+        <img src="https://m.media-amazon.com/images/I/71ha1jNkzeL._AC_SX679_.jpg" alt="Produto 9">
+        <h3>Composto Lácteo, Nestlé, Ninho Forti+, Pacote, 750g</h3>
+        <a href="https://amzn.to/3Wxo9jV" class="price-button" onclick="showAlert('Produto 9')">R$ 159,00</a>
     </div>
     <div class="product">
-        <img src="produto11.jpg" alt="Produto 11">
-        <h3>Produto 11</h3>
-        <a href="link-de-afiliado11" class="price-button" onclick="showAlert('Produto 11')">R$ 600,00</a>
+        <img src="https://m.media-amazon.com/images/I/611phuF3cWL._AC_SX522_.jpg" alt="Produto 10">
+        <h3>Heinz Pack Ketchup 397G + Maionese 390G</h3>
+        <a href="https://amzn.to/4caY8N0" class="price-button" onclick="showAlert('Produto 10')">R$ 22,90</a>
     </div>
     <div class="product">
-        <img src="produto12.jpg" alt="Produto 12">
-        <h3>Produto 12</h3>
-        <a href="link-de-afiliado12" class="price-button" onclick="showAlert('Produto 12')">R$ 650,00</a>
+        <img src="https://m.media-amazon.com/images/I/41p8MttahYL._AC_SX522_.jpg" alt="Produto 11">
+        <h3>Fritadeira Airfryer Digital, 4.1L</h3>
+        <a href="https://m.media-amazon.com/images/I/41p8MttahYL._AC_SX522_.jpg" class="price-button" onclick="showAlert('Produto 11')">R$ 349,00</a>
     </div>
     <div class="product">
-        <img src="produto13.jpg" alt="Produto 13">
-        <h3>Produto 13</h3>
-        <a href="link-de-afiliado13" class="price-button" onclick="showAlert('Produto 13')">R$ 700,00</a>
+        <img src="https://m.media-amazon.com/images/I/81-90xmGZjS._AC_SX679_.jpg" alt="Produto 12">
+        <h3>Ninho - Leite em Pó, Integral, 380g</h3>
+        <a href="https://amzn.to/4csqYJ3" class="price-button" onclick="showAlert('Produto 12')">R$ 15,00</a>
+    </div>
+    <!-- 20 novos produtos -->
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/51zpdZ1GL6L._AC_SX425_.jpg" alt="Produto 13">
+        <h3>Densidade Máscara 230 G</h3>
+        <a href="https://amzn.to/3LSd0oP" class="price-button" onclick="showAlert('Produto 13')">R$ 29,90</a>
     </div>
     <div class="product">
-        <img src="produto14.jpg" alt="Produto 14">
+        <img src="https://example.com/produto14.jpg" alt="Produto 14">
         <h3>Produto 14</h3>
-        <a href="link-de-afiliado14" class="price-button" onclick="showAlert('Produto 14')">R$ 750,00</a>
+        <a href="link-de-afiliado14" class="price-button" onclick="showAlert('Produto 14')">R$ 78,00</a>
     </div>
     <div class="product">
-        <img src="produto15.jpg" alt="Produto 15">
+        <img src="https://example.com/produto15.jpg" alt="Produto 15">
         <h3>Produto 15</h3>
-        <a href="link-de-afiliado15" class="price-button" onclick="showAlert('Produto 15')">R$ 800,00</a>
+        <a href="link-de-afiliado15" class="price-button" onclick="showAlert('Produto 15')">R$ 29,00</a>
     </div>
     <div class="product">
-        <img src="produto16.jpg" alt="Produto 16">
+        <img src="https://example.com/produto16.jpg" alt="Produto 16">
         <h3>Produto 16</h3>
-        <a href="link-de-afiliado16" class="price-button" onclick="showAlert('Produto 16')">R$ 850,00</a>
+        <a href="link-de-afiliado16" class="price-button" onclick="showAlert('Produto 16')">R$ 88,00</a>
     </div>
     <div class="product">
-        <img src="produto17.jpg" alt="Produto 17">
+        <img src="https://example.com/produto17.jpg" alt="Produto 17">
         <h3>Produto 17</h3>
-        <a href="link-de-afiliado17" class="price-button" onclick="showAlert('Produto 17')">R$ 900,00</a>
+        <a href="link-de-afiliado17" class="price-button" onclick="showAlert('Produto 17')">R$ 54,00</a>
     </div>
     <div class="product">
-        <img src="produto18.jpg" alt="Produto 18">
+        <img src="https://example.com/produto18.jpg" alt="Produto 18">
         <h3>Produto 18</h3>
-        <a href="link-de-afiliado18" class="price-button" onclick="showAlert('Produto 18')">R$ 950,00</a>
+        <a href="link-de-afiliado18" class="price-button" onclick="showAlert('Produto 18')">R$ 99,00</a>
     </div>
     <div class="product">
-        <img src="produto19.jpg" alt="Produto 19">
+        <img src="https://example.com/produto19.jpg" alt="Produto 19">
         <h3>Produto 19</h3>
-        <a href="link-de-afiliado19" class="price-button" onclick="showAlert('Produto 19')">R$ 1000,00</a>
+        <a href="link-de-afiliado19" class="price-button" onclick="showAlert('Produto 19')">R$ 22,00</a>
     </div>
     <div class="product">
-        <img src="produto20.jpg" alt="Produto 20">
+        <img src="https://example.com/produto20.jpg" alt="Produto 20">
         <h3>Produto 20</h3>
-        <a href="link-de-afiliado20" class="price-button" onclick="showAlert('Produto 20')">R$ 1050,00</a>
+        <a href="link-de-afiliado20" class="price-button" onclick="showAlert('Produto 20')">R$ 135,00</a>
     </div>
     <div class="product">
-        <img src="produto21.jpg" alt="Produto 21">
+        <img src="https://example.com/produto21.jpg" alt="Produto 21">
         <h3>Produto 21</h3>
-        <a href="link-de-afiliado21" class="price-button" onclick="showAlert('Produto 21')">R$ 1100,00</a>
+        <a href="link-de-afiliado21" class="price-button" onclick="showAlert('Produto 21')">R$ 49,00</a>
     </div>
     <div class="product">
-        <img src="produto22.jpg" alt="Produto 22">
+        <img src="https://example.com/produto22.jpg" alt="Produto 22">
         <h3>Produto 22</h3>
-        <a href="link-de-afiliado22" class="price-button" onclick="showAlert('Produto 22')">R$ 1150,00</a>
+        <a href="link-de-afiliado22" class="price-button" onclick="showAlert('Produto 22')">R$ 67,00</a>
     </div>
     <div class="product">
-        <img src="produto23.jpg" alt="Produto 23">
+        <img src="https://example.com/produto23.jpg" alt="Produto 23">
         <h3>Produto 23</h3>
-        <a href="link-de-afiliado23" class="price-button" onclick="showAlert('Produto 23')">R$ 1200,00</a>
+        <a href="link-de-afiliado23" class="price-button" onclick="showAlert('Produto 23')">R$ 55,00</a>
     </div>
     <div class="product">
-        <img src="produto24.jpg" alt="Produto 24">
+        <img src="https://example.com/produto24.jpg" alt="Produto 24">
         <h3>Produto 24</h3>
-        <a href="link-de-afiliado24" class="price-button" onclick="showAlert('Produto 24')">R$ 1250,00</a>
+        <a href="link-de-afiliado24" class="price-button" onclick="showAlert('Produto 24')">R$ 79,00</a>
     </div>
     <div class="product">
-        <img src="produto25.jpg" alt="Produto 25">
+        <img src="https://example.com/produto25.jpg" alt="Produto 25">
         <h3>Produto 25</h3>
-        <a href="link-de-afiliado25" class="price-button" onclick="showAlert('Produto 25')">R$ 1300,00</a>
+        <a href="link-de-afiliado25" class="price-button" onclick="showAlert('Produto 25')">R$ 65,00</a>
+    </div>
+    <div class="product">
+        <img src="https://example.com/produto26.jpg" alt="Produto 26">
+        <h3>Produto 26</h3>
+        <a href="link-de-afiliado26" class="price-button" onclick="showAlert('Produto 26')">R$ 88,00</a>
+    </div>
+    <div class="product">
+        <img src="https://example.com/produto27.jpg" alt="Produto 27">
+        <h3>Produto 27</h3>
+        <a href="link-de-afiliado27" class="price-button" onclick="showAlert('Produto 27')">R$ 53,00</a>
+    </div>
+    <div class="product">
+        <img src="https://example.com/produto28.jpg" alt="Produto 28">
+        <h3>Produto 28</h3>
+        <a href="link-de-afiliado28" class="price-button" onclick="showAlert('Produto 28')">R$ 77,00</a>
+    </div>
+    <div class="product">
+        <img src="https://example.com/produto29.jpg" alt="Produto 29">
+        <h3>Produto 29</h3>
+        <a href="link-de-afiliado29" class="price-button" onclick="showAlert('Produto 29')">R$ 89,00</a>
+    </div>
+    <div class="product">
+        <img src="https://example.com/produto30.jpg" alt="Produto 30">
+        <h3>Produto 30</h3>
+        <a href="link-de-afiliado30" class="price-button" onclick="showAlert('Produto 30')">R$ 38,00</a>
+    </div>
+    <div class="product">
+        <img src="https://example.com/produto31.jpg" alt="Produto 31">
+        <h3>Produto 31</h3>
+        <a href="link-de-afiliado31" class="price-button" onclick="showAlert('Produto 31')">R$ 69,00</a>
+    </div>
+    <div class="product">
+        <img src="https://example.com/produto32.jpg" alt="Produto 32">
+        <h3>Produto 32</h3>
+        <a href="link-de-afiliado32" class="price-button" onclick="showAlert('Produto 32')">R$ 99,00</a>
     </div>
 </div>
 
-<div class="footer">
-    <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
-</div>
+<footer class="footer">
+    <a href="/termos-de-uso.html">Termos de Uso</a> | 
+    <a href="/politicas-de-privacidade.html">Políticas de Privacidade</a>
+</footer>
 
 <script>
-    // Mensagem de boas-vindas
-    window.onload = function() {
-        alert('Bem-vindo ao Promomastt!');
-    };
-
-    // Filtragem de produtos
-    document.getElementById('search-input').addEventListener('input', function() {
-        var query = this.value.toLowerCase();
-        var products = document.querySelectorAll('.product');
-        products.forEach(function(product) {
-            var productName = product.querySelector('h3').textContent.toLowerCase();
-            if (productName.includes(query)) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-    });
-
-    // Alerta de produto
-    function showAlert(productName) {
-        alert('Você clicou em: ' + productName);
+    function showAlert(product) {
+        alert('Produto selecionado: ' + product);
     }
 </script>
 
